@@ -1,0 +1,17 @@
+.food-display{
+    margin-top: 30px;
+
+}
+.food-display h2{
+    font-size:max(2vw,24px);/*The max function ensures that the font size is at least 24 pixels but can grow larger based on the viewport width (2vw stands for 2% of the viewport width). This makes the text responsive, scaling up or down depending on the screen size, but not smaller than 24 pixels.*/
+    font-weight:600;
+}
+.food-display-list{
+    display:grid;/* This enables a grid-based layout for its child elements.*/
+    grid-template-columns: repeat(auto-fill,minmax(240px,1fr));
+    /*auto-fill: Fills the row with as many columns as will fit.
+minmax(240px, 1fr): Defines the minimum width of each column as 240 pixels, but allows it to grow to take up more space if available (up to 1fr, which represents a fraction of the available space).*/
+    margin-top:30px;
+    gap:30px;
+    row-gap:50px;
+}
